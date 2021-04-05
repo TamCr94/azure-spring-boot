@@ -12,6 +12,7 @@
         <module>library</module>
         <module>application</module>
         <module>cronjob</module>
+        <module>active-directory</module>
     </modules>
 
 </project>

@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="multi-module-library" />
         <module name="multi-module-application" />
+        <module name="multi-module-library" />
         <module name="cronjob" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="active-directory" target="8" />
       <module name="cronjob" target="1.8" />
       <module name="gs-multi-module" target="1.5" />
       <module name="multi-module-application" target="1.8" />
