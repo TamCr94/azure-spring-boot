@@ -9,10 +9,11 @@
         <module name="multi-module-application" />
         <module name="multi-module-library" />
         <module name="cronjob" />
+        <module name="active-directory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="active-directory" target="8" />
+      <module name="active-directory" target="11" />
       <module name="cronjob" target="1.8" />
       <module name="gs-multi-module" target="1.5" />
       <module name="multi-module-application" target="1.8" />
@@ -21,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="active-directory" options="-parameters" />
       <module name="cronjob" options="-parameters" />
       <module name="multi-module-application" options="-parameters" />
       <module name="multi-module-library" options="-parameters" />
