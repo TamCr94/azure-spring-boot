@@ -129,7 +129,7 @@
                     <appName>${functionAppName}</appName>
                     <region>${functionAppRegion}</region>
                     <runtime>
-                        <os>linux</os>
+                        <os>windows</os>
                         <javaVersion>11</javaVersion>
                     </runtime>
                     <appSettings>
@@ -284,4 +284,34 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+                <functionResourceGroup>my-first-spring-azure-resource-group</functionResourceGroup>
+                <functionAppName>my-spring-cronjob-dev</functionAppName>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <activatedProperties>test</activatedProperties>
+                <functionResourceGroup>my-first-spring-azure-resource-group</functionResourceGroup>
+                <functionAppName>my-spring-cronjob-test</functionAppName>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <activatedProperties>prod</activatedProperties>
+                <functionResourceGroup>my-first-spring-azure-resource-group</functionResourceGroup>
+                <functionAppName>my-spring-cronjob-prod</functionAppName>
+            </properties>
+        </profile>
+    </profiles>
 </project>

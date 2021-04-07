@@ -6,13 +6,16 @@ import com.microsoft.azure.functions.*;
 import com.microsoft.azure.functions.annotation.AuthorizationLevel;
 import com.microsoft.azure.functions.annotation.FunctionName;
 import com.microsoft.azure.functions.annotation.HttpTrigger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.function.adapter.azure.AzureSpringBootRequestHandler;
+import org.springframework.core.env.Environment;
 
 import java.util.Optional;
 
 public class HelloHandler extends AzureSpringBootRequestHandler<User, Greeting> {
 
-    @FunctionName("hello")
+    @FunctionName("helloFunction")
     public HttpResponseMessage execute(
             @HttpTrigger(name = "request", methods = {HttpMethod.GET, HttpMethod.POST}, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<User>> request,
             ExecutionContext context) {

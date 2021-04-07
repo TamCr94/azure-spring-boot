@@ -15,11 +15,6 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @Bean("hello")
-    public Function<User, Greeting> hello() {
-        return user -> new Greeting("Hello! Welcome, " + user.getName());
-    }
-
     @Bean("sendMail")
     public Function<String, String> sendMail() {
         return mailAddress -> "Send email to " + mailAddress + " success fully";
